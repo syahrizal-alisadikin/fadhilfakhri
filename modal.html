@@ -1,0 +1,71 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Kirim Product</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Penerima</label>
+            <input
+              type="text"
+              readonly
+              class="form-control"
+              value="{{ $orders->name }}"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">Phone</label>
+            <input
+              type="number"
+              readonly
+              class="form-control"
+              value="{{ $orders->phone }}"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">alamat</label>
+            <textarea class="form-control" readonly rows="3">
+{{ $orders->alamat }}</textarea
+            >
+          </div>
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Estimasi Pengiriman</label>
+            <select name="estimasi" class="form-select" id="">
+              <option value="1">1Pilih hari</option>
+              <option value="1">1 Hari</option>
+              <option value="2">2 Hari</option>
+              <option value="3">3 Hari</option>
+              <option value="4">4 Hari</option>
+              <option value="5">5 Hari</option>
+              <option value="6">6 Hari</option>
+              <option value="7">7 Hari</option>
+              <option value="8">8 Hari</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
